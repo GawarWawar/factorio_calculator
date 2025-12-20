@@ -13,18 +13,16 @@ class Item (models.Model):
     raw = models.BooleanField(verbose_name="Is Item Raw") #True/False
      
 class Recipe (models.Model):
-    ...
-    # name = models.CharField(verbose_name="recipe Name", max_length=100, primary_key=True)
+    name = models.CharField(verbose_name="Recipe Name", max_length=100, unique=True)
     items = models.ManyToManyField(Item, through="Items_In_Recipe")
-    # time_to_produce = 
-    # output_quantity = 
+    time_to_complete = models.FloatField(verbose_name="Recipe Time to complete")
+    output_quantity = models.FloatField(verbose_name="Recipe Output Quantity")
     # description =     
     
 class Items_In_Recipe (models.Model):
-    ...
-    # recipe =
-    # item_name = 
-    # item_quantity =
+    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
+    item = models.ForeignKey(Item, on_delete=models.CASCADE)
+    item_quantity = models.FloatField(verbose_name="Quantity of Items Needed for Recipe")
     
 class Building (models.Model):
     ... 
