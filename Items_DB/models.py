@@ -8,9 +8,9 @@ class Item (models.Model):
     # raw = #True/False
     # researches = 
      
-class Receipe (models.Model):
+class Recipe (models.Model):
     ...
-    # name = models.CharField(verbose_name="Receipe Name", max_length=100, primary_key=True)
+    # name = models.CharField(verbose_name="recipe Name", max_length=100, primary_key=True)
     items = models.ManyToManyField(Item, through="Items_In_Recipe")
     # time_to_produce = 
     # output_quantity = 
@@ -18,7 +18,7 @@ class Receipe (models.Model):
     
 class Items_In_Recipe (models.Model):
     ...
-    # receipe =
+    # recipe =
     # item_name = 
     # item_quantity =
     
@@ -26,7 +26,7 @@ class Building (models.Model):
     ... 
     # name =
     # item = 
-    recipes = models.ManyToManyField(Receipe)
+    recipes = models.ManyToManyField(Recipe)
     # speed =
     # power_source = #electricity/burner
     # power_consumption = #in watts
