@@ -31,5 +31,35 @@ class Building (models.Model):
     # power_source = #electricity/burner
     # power_consumption = #in watts
     # drain = #can be NONE
+    # pollution = 
     # n_of_module_slots = #0/1/2/3/4
     # productivity = #upps with productivity module, base = 1
+
+    
+class Module(models.Model):
+    ...
+    # item =
+    # speed_modifier = 
+    # productivity_modifier =
+    # power_consumption_modifier =
+    
+class Fuel(models.Model):
+    ...
+    # item = 
+    # energy_stored =
+    
+class Conveyor_belt (models.Model):
+    ...
+    # item =
+    # moving_speed =
+    
+class Manipulator (models.Model):
+    ...
+    # item =
+    # rotation_speed =
+    # hand_size = 
+    # power_source = #electricity/burner
+    # power_consumption = #in watts
+    # drain = #can be NONE
+    # pollution = 
+    # rotation_speed = 
