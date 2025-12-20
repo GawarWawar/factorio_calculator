@@ -63,3 +63,21 @@ class Manipulator (models.Model):
     # drain = #can be NONE
     # pollution = 
     # rotation_speed = 
+        
+ 
+class Research (models.Model):
+    ...
+    # name = 
+    # packs = 
+    
+class Technologies (models.Model):
+    ...
+    # name = 
+    
+
+class Packs_In_Research (models.Model):
+    ...
+    # research =
+    # pack = 
+    # item_quantity =
+    # pack_consume_time = 
