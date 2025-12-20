@@ -30,7 +30,7 @@ class Building (models.Model):
     # item = 
     recipes = models.ManyToManyField(Recipe)
     # speed =
-    # power_source = #electricity/burner
+    # energy_source = #electricity/burner
     # power_consumption = #in watts
     # drain = #can be NONE
     # pollution = 
