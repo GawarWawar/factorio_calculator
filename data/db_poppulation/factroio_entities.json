@@ -1,0 +1,110 @@
+{
+    "items":[
+        {
+            "name": "iron_ore",
+            "type": "s",
+            "max_stack_size": 50,
+            "resource": true
+        },
+        {
+            "name": "iron_plate",
+            "type": "s",
+            "max_stack_size": 100
+        },
+        {
+            "name": "iron_gear",
+            "type": "s",
+            "max_stack_size": 100
+        },
+        {
+            "name": "copper_ore",
+            "type": "s",
+            "max_stack_size": 50,
+            "resource": true
+        },
+        {
+            "name": "copper_plate",
+            "type": "s",
+            "max_stack_size": 100
+        },
+        {
+            "name": "copper_coil",
+            "type": "s",
+            "max_stack_size": 200
+        },
+        {
+            "name": "electronic_circuit",
+            "type": "s",
+            "max_stack_size": 200
+        }
+    ],
+    "recipes": [
+        {
+            "name" : "iron_ore",
+            "time_to_complete" : 1,
+            "output_quantity" : 1
+        },
+        {
+            "name" : "iron_plate",
+            "time_to_complete" : 3.2,
+            "output_quantity" : 1
+        },
+        {
+            "name" : "iron_gear",
+            "time_to_complete" : 0.5,
+            "output_quantity" : 1
+        },
+        {
+            "name" : "copper_ore",
+            "time_to_complete" : 1,
+            "output_quantity" : 1
+        },
+        {
+            "name" : "copper_plate",
+            "time_to_complete" : 3.2,
+            "output_quantity" : 1
+        },
+        {
+            "name" : "copper_coil",
+            "time_to_complete" : 0.5,
+            "output_quantity" : 2
+        },
+        {
+            "name" : "electronic_circuit",
+            "time_to_complete" : 0.5,
+            "output_quantity" : 1
+        }
+    ],
+    "items_in_recipes": [
+        {
+            "recipe": "iron_plate",
+            "item": "iron_ore",
+            "item_quantity": 1
+        },
+        {
+            "recipe": "iron_gear",
+            "item": "iron_plate",
+            "item_quantity": 2
+        },
+        {
+            "recipe": "copper_plate",
+            "item": "copper_ore",
+            "item_quantity": 2
+        },
+        {
+            "recipe": "copper_coil",
+            "item": "copper_plate",
+            "item_quantity": 1
+        },
+        {
+            "recipe": "electronic_circuit",
+            "item": "iron_plate",
+            "item_quantity": 1
+        },
+        {
+            "recipe": "electronic_circuit",
+            "item": "copper_coil",
+            "item_quantity": 3
+        }
+    ]
+}
