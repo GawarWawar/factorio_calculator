@@ -10,7 +10,7 @@ class Item (models.Model):
     name = models.CharField(verbose_name="Item Name", max_length=100, unique=True)
     type = models.CharField(verbose_name="Item Type", max_length=3, choices=ITEM_TYPES) #solid/liquid
     max_stack_size = models.IntegerField(verbose_name="Item Stack Size")
-    raw = models.BooleanField(verbose_name="Is Item Raw") #True/False
+    resource = models.BooleanField(verbose_name="Is Item Resource", default=False) #True/False
      
 class Recipe (models.Model):
     name = models.CharField(verbose_name="Recipe Name", max_length=100, unique=True)
