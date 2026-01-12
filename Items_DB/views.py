@@ -16,7 +16,7 @@ def add_items__internal(request):
         DB_in_json_from_file = json.load(file_with_json)
     print(DB_in_json_from_file)
     for item in DB_in_json_from_file["items"]:
-        resource = item["resource"]
+
         if "resource" in item.keys():
             resource = item["resource"]
         else:
