@@ -39,4 +39,20 @@ def populate_db__internal(request):
                 #TODO: Make a log instead
                 print(f"Item {model_to_dict(new_item)} was created in {Item.__name__} model")
 
+    for recipe in DB_in_json_from_file["recipes"]:    
+            new_recipe, created = Recipe.objects.get_or_create(
+                name = recipe["name"],
+                time_to_complete = recipe["time_to_complete"],
+                output_quantity = recipe["output_quantity"]
+            )
+            
+            if not created:
+                #TODO: Make a log instead
+                print(f"Recipe with name {recipe["name"]} already exists in {Recipe.__name__} model")
+            else:
+                new_recipe.save()       
+                #TODO: Make a log instead
+                print(f"Recipe {model_to_dict(new_recipe)} was created in {Recipe.__name__} model")
+                
+        
     return HttpResponse("")
