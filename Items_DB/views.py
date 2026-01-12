@@ -38,3 +38,5 @@ def add_items__internal(request):
                 new_item.save()
                 #TODO: Make a log instead
                 print(f"Item {model_to_dict(new_item)} was created in {Item.__name__} model")
+
+    return HttpResponse("")
