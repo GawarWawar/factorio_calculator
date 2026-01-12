@@ -11,7 +11,7 @@ import os
 def index(request):
     return  HttpResponse("")
 
-def add_items__internal(request):
+def populate_db__internal(request):
     with open("data/db_population/factorio_entities.json") as file_with_json:
         DB_in_json_from_file = json.load(file_with_json)
     print(DB_in_json_from_file)

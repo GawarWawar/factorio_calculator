@@ -5,5 +5,5 @@ from . import views
 app_name = "itemsDB"
 urlpatterns = [
     path("",views.index, name="index"),
-    path("add_items__internal", views.add_items__internal)
+    path("add_items__internal", views.populate_db__internal)
 ]
